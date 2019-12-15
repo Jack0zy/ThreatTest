@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "title": "ThreatModelTest",
+    "owner": "Test"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "TestModel",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ]
+  }
+}
