@@ -8,7 +8,1310 @@
       {
         "title": "ThreatModelTest",
         "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "angle": 0,
+              "id": "87f6dd59-0c56-40ec-b13e-cac02b9ba14d",
+              "z": 1,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "User"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 84,
+                "y": 204
+              },
+              "angle": 0,
+              "id": "3e12815e-4ca7-45a8-9b0d-23a1f1306ee9",
+              "z": 2,
+              "hasOpenThreats": false,
+              "privilegeLevel": "Admin/User",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Web Browser"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "87f6dd59-0c56-40ec-b13e-cac02b9ba14d"
+              },
+              "target": {
+                "id": "3e12815e-4ca7-45a8-9b0d-23a1f1306ee9"
+              },
+              "vertices": [
+                {
+                  "x": 11,
+                  "y": 163
+                }
+              ],
+              "id": "89f439cf-9e10-4705-9717-75bb82e04939",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.6051285318575516,
+                    "offset": 3.3021058080188554
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Input",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 3,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "3e12815e-4ca7-45a8-9b0d-23a1f1306ee9"
+              },
+              "target": {
+                "id": "87f6dd59-0c56-40ec-b13e-cac02b9ba14d"
+              },
+              "vertices": [
+                {
+                  "x": 237,
+                  "y": 166
+                }
+              ],
+              "id": "8b4c4c5d-cce3-4680-8da6-66770d1fa5ef",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Output",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 4,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 72,
+                "y": 400
+              },
+              "angle": 0,
+              "id": "23fbd051-e765-4d8c-b966-ca3140dc789a",
+              "z": 5,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Captcha Service"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "3e12815e-4ca7-45a8-9b0d-23a1f1306ee9"
+              },
+              "target": {
+                "id": "23fbd051-e765-4d8c-b966-ca3140dc789a"
+              },
+              "vertices": [
+                {
+                  "x": 34,
+                  "y": 371
+                }
+              ],
+              "id": "882e5837-7be9-4095-b596-556c70737a1a",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Captcha",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 6,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "23fbd051-e765-4d8c-b966-ca3140dc789a"
+              },
+              "target": {
+                "id": "3e12815e-4ca7-45a8-9b0d-23a1f1306ee9"
+              },
+              "vertices": [
+                {
+                  "x": 245,
+                  "y": 353
+                }
+              ],
+              "id": "035fae7b-083b-4ea6-a68e-779d16a6e795",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Captcha",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 7,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 400,
+                "y": 198
+              },
+              "angle": 0,
+              "id": "b4699590-0030-4fa7-a74e-a6745beaea0c",
+              "z": 8,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Authorization\nService"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "3e12815e-4ca7-45a8-9b0d-23a1f1306ee9"
+              },
+              "target": {
+                "id": "b4699590-0030-4fa7-a74e-a6745beaea0c"
+              },
+              "vertices": [
+                {
+                  "x": 284,
+                  "y": 316
+                },
+                {
+                  "x": 347,
+                  "y": 300
+                }
+              ],
+              "id": "5f14f21f-fef4-465e-b58e-d2d18a49804d",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Mobile No and\nZipcode",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 9,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "Https",
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "b4699590-0030-4fa7-a74e-a6745beaea0c"
+              },
+              "target": {
+                "id": "3e12815e-4ca7-45a8-9b0d-23a1f1306ee9"
+              },
+              "vertices": [
+                {
+                  "x": 274,
+                  "y": 194
+                }
+              ],
+              "id": "3b0fa3fc-ced9-45db-b60b-050df69726a7",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Authorization\nmessage",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 10,
+              "hasOpenThreats": false,
+              "isPublicNetwork": true,
+              "isEncrypted": true,
+              "protocol": "Https",
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 3,
+                "y": 365
+              },
+              "target": {
+                "x": 416,
+                "y": 169
+              },
+              "vertices": [],
+              "id": "9e6af66d-1ff8-4022-8481-8fc7df13842b",
+              "z": 11,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 655,
+                "y": 202
+              },
+              "angle": 0,
+              "id": "13a1c943-16b0-49c9-b2c0-b04e6ce011b5",
+              "z": 12,
+              "hasOpenThreats": false,
+              "privilegeLevel": "Admin/User",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Recharge\nOptions"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "b4699590-0030-4fa7-a74e-a6745beaea0c"
+              },
+              "target": {
+                "id": "13a1c943-16b0-49c9-b2c0-b04e6ce011b5"
+              },
+              "vertices": [
+                {
+                  "x": 579,
+                  "y": 138
+                }
+              ],
+              "id": "af595807-d4e2-42b7-bc59-ff6add4ed318",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Successful\nAuthorization",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 13,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "13a1c943-16b0-49c9-b2c0-b04e6ce011b5"
+              },
+              "target": {
+                "id": "b4699590-0030-4fa7-a74e-a6745beaea0c"
+              },
+              "vertices": [
+                {
+                  "x": 569,
+                  "y": 324
+                }
+              ],
+              "id": "8f659580-f740-4932-9f9e-3575a647d80a",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Successful\nAuthorization",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 14,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 835,
+                "y": 23
+              },
+              "angle": 0,
+              "id": "3eed7579-8d0b-40d7-8b71-02fc7b5ede95",
+              "z": 15,
+              "hasOpenThreats": false,
+              "privilegeLevel": "Admin/User",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Credit/Debit\ncard details"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "13a1c943-16b0-49c9-b2c0-b04e6ce011b5"
+              },
+              "target": {
+                "id": "3eed7579-8d0b-40d7-8b71-02fc7b5ede95"
+              },
+              "vertices": [
+                {
+                  "x": 703,
+                  "y": 78
+                }
+              ],
+              "id": "4d4527c5-064d-4758-9b4a-b26a34603b69",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Option 1",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 16,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 1091,
+                "y": 1
+              },
+              "angle": 0,
+              "id": "fb08d268-dcd2-4cc1-a42a-bb320c456d7e",
+              "z": 17,
+              "hasOpenThreats": false,
+              "privilegeLevel": "Admin/User",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Address\nsuggestion"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "3eed7579-8d0b-40d7-8b71-02fc7b5ede95"
+              },
+              "target": {
+                "id": "fb08d268-dcd2-4cc1-a42a-bb320c456d7e"
+              },
+              "vertices": [
+                {
+                  "x": 1010,
+                  "y": 28
+                }
+              ],
+              "id": "72d81570-d1df-4bea-8d1d-49f8b100b1ea",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Card details flow",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 18,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "fb08d268-dcd2-4cc1-a42a-bb320c456d7e"
+              },
+              "target": {
+                "id": "3eed7579-8d0b-40d7-8b71-02fc7b5ede95"
+              },
+              "vertices": [
+                {
+                  "x": 1020,
+                  "y": 125
+                }
+              ],
+              "id": "f0962253-027f-48bf-b04f-a2b5133b5438",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Card details flow",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 19,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 1355,
+                "y": 12
+              },
+              "angle": 0,
+              "id": "31742d35-15f8-4140-a9bc-8a6481057e9d",
+              "z": 20,
+              "hasOpenThreats": false,
+              "privilegeLevel": "Admin",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Third Party\nPayment\nGateway"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "fb08d268-dcd2-4cc1-a42a-bb320c456d7e"
+              },
+              "target": {
+                "id": "31742d35-15f8-4140-a9bc-8a6481057e9d"
+              },
+              "vertices": [
+                {
+                  "x": 1310,
+                  "y": 55
+                }
+              ],
+              "id": "b3d2b93c-d818-4480-8878-483a6020f27a",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "flow 20",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 21,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 1247,
+                "y": 1
+              },
+              "target": {
+                "x": 1249,
+                "y": 125
+              },
+              "vertices": [
+                {
+                  "x": 1251,
+                  "y": 100
+                }
+              ],
+              "id": "d7a07382-4a36-4bc6-b20a-9c27c46c287d",
+              "z": 22,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 1357,
+                "y": 202
+              },
+              "angle": 0,
+              "id": "3b45caec-bdfd-4dde-8a3f-545e39fcb106",
+              "z": 23,
+              "hasOpenThreats": false,
+              "privilegeLevel": "Admin/User",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Recharge\ndetails"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "31742d35-15f8-4140-a9bc-8a6481057e9d"
+              },
+              "target": {
+                "id": "3b45caec-bdfd-4dde-8a3f-545e39fcb106"
+              },
+              "vertices": [],
+              "id": "9ab75ab6-971b-476a-a0e1-7880370fca9c",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Payment Details",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 24,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 651,
+                "y": 557
+              },
+              "angle": 0,
+              "id": "9477a97a-260f-40ff-841c-0f0717324aa9",
+              "z": 25,
+              "hasOpenThreats": false,
+              "privilegeLevel": "Admin/User",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Refill Card\ndetails"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "13a1c943-16b0-49c9-b2c0-b04e6ce011b5"
+              },
+              "target": {
+                "id": "9477a97a-260f-40ff-841c-0f0717324aa9"
+              },
+              "vertices": [
+                {
+                  "x": 631,
+                  "y": 436
+                }
+              ],
+              "id": "33432cbc-b37f-4402-bf24-40937189b43f",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.359514787483525,
+                    "offset": 4.441172482543318
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Option 2",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 26,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 1162,
+                "y": 549
+              },
+              "angle": 0,
+              "id": "8694c256-e36c-4780-adf3-560cfb9eb4bf",
+              "z": 27,
+              "hasOpenThreats": false,
+              "privilegeLevel": "Admin/User",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Refill Card\ndetails\nverification"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 882,
+                "y": 564
+              },
+              "angle": 0,
+              "id": "8879d768-0c5a-48a1-b377-b292e4f93613",
+              "z": 28,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Captcha Service"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "9477a97a-260f-40ff-841c-0f0717324aa9"
+              },
+              "target": {
+                "id": "8879d768-0c5a-48a1-b377-b292e4f93613"
+              },
+              "vertices": [
+                {
+                  "x": 796,
+                  "y": 532
+                }
+              ],
+              "id": "104070b5-e49d-4dc5-b862-2ca909023d7e",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Refill card details\nflow",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 29,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "8879d768-0c5a-48a1-b377-b292e4f93613"
+              },
+              "target": {
+                "id": "9477a97a-260f-40ff-841c-0f0717324aa9"
+              },
+              "vertices": [
+                {
+                  "x": 811,
+                  "y": 694
+                }
+              ],
+              "id": "9c0adc9d-922c-4372-948c-777de831f787",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Refill card details\nflow",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 30,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "8879d768-0c5a-48a1-b377-b292e4f93613"
+              },
+              "target": {
+                "id": "8694c256-e36c-4780-adf3-560cfb9eb4bf"
+              },
+              "vertices": [
+                {
+                  "x": 1100,
+                  "y": 498
+                }
+              ],
+              "id": "e8dae592-1dc2-4cd2-9117-31e1d342bca3",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Refill card details\nflow",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 31,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "8694c256-e36c-4780-adf3-560cfb9eb4bf"
+              },
+              "target": {
+                "id": "8879d768-0c5a-48a1-b377-b292e4f93613"
+              },
+              "vertices": [
+                {
+                  "x": 1097,
+                  "y": 704
+                }
+              ],
+              "id": "2ac4e654-9bff-4397-883f-0d639f7702ed",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Refill card details\nflow",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 32,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "Https",
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "8694c256-e36c-4780-adf3-560cfb9eb4bf"
+              },
+              "target": {
+                "id": "3b45caec-bdfd-4dde-8a3f-545e39fcb106"
+              },
+              "vertices": [
+                {
+                  "x": 1379,
+                  "y": 478
+                }
+              ],
+              "id": "0003e236-39b4-49d4-8729-801981b90749",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Recharge details",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 33,
+              "hasOpenThreats": false,
+              "protocol": "Https",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 1154,
+                "y": 845
+              },
+              "angle": 0,
+              "id": "55c22158-6bba-452e-a9bc-1d65415854dd",
+              "z": 34,
+              "hasOpenThreats": false,
+              "isALog": true,
+              "isEncrypted": true,
+              "isSigned": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "RefillCard Database"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "8694c256-e36c-4780-adf3-560cfb9eb4bf"
+              },
+              "target": {
+                "id": "55c22158-6bba-452e-a9bc-1d65415854dd"
+              },
+              "vertices": [
+                {
+                  "x": 1118,
+                  "y": 779
+                }
+              ],
+              "id": "467c4f14-0b47-4032-a7b3-da35472fc8e5",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Card number\nvalidation",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 35,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "TCP/UDP",
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "55c22158-6bba-452e-a9bc-1d65415854dd"
+              },
+              "target": {
+                "id": "8694c256-e36c-4780-adf3-560cfb9eb4bf"
+              },
+              "vertices": [
+                {
+                  "x": 1335,
+                  "y": 760
+                }
+              ],
+              "id": "8ac0d947-72a7-4c84-91b2-68e5fac152fd",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Card number\nvalidation",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 36,
+              "hasOpenThreats": false,
+              "protocol": "TCP/UDP",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 1504,
+                "y": 146
+              },
+              "target": {
+                "x": 1297,
+                "y": 152
+              },
+              "vertices": [
+                {
+                  "x": 1388,
+                  "y": 147
+                }
+              ],
+              "id": "9e4f18eb-f071-4fc3-a17b-2cbda204cfac",
+              "z": 37,
+              "attrs": {}
+            }
+          ]
+        },
+        "size": {
+          "height": 993,
+          "width": 1721
+        }
       }
     ]
   }
